@@ -53,7 +53,9 @@
 			var answer = "ويش فيك انت الحين";
 			var guess = prompt("من العايدين الفايزين");
 
-			if (guess === answer) {
+			if (guess === null) {
+				trickyDiv.style.display = "none";
+			} else if (guess === answer) {
 				trickyDiv.innerHTML = "(EARHWZ29BRMV)    (US8GVGURURGD) 🫴🏻 امسكي عيدية ";
 			} else {
 				trickyDiv.innerHTML = "Incorrect, the answer is \"" + answer + "\".";
