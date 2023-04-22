@@ -36,6 +36,19 @@
 			margin-top: 50px;
 			display: none;
 		}
+		
+		.move {
+			animation: move 0.1s infinite;
+		}
+		
+		@keyframes move {
+			from {
+				transform: translate(0, 0);
+			}
+			to {
+				transform: translate(50px, 50px);
+			}
+		}
 	</style>
 </head>
 <body>
@@ -45,22 +58,21 @@
 
 	<div id="tricky" class="tricky"></div>
 
-	<script>
-		function startTrickyGame() {
-			var trickyDiv = document.getElementById("tricky");
-			trickyDiv.style.display = "block";
+<script>
+function startTrickyGame() {
+    var trickyDiv = document.getElementById("tricky");
+    trickyDiv.style.display = "block";
 
-			var answer = "ويش فيك انت الحين";
-			var guess = prompt("من العايدين الفايزين");
+    var answer = "ويش فيك انت الحين";
+    var guess = prompt("من العايدين الفايزين");
 
-			if (guess === null) {
-				trickyDiv.style.display = "none";
-			} else if (guess === answer) {
-				trickyDiv.innerHTML = "(EARHWZ29BRMV)    (US8GVGURURGD) 🫴🏻 امسكي عيدية ";
-			} else {
-				trickyDiv.innerHTML = "Incorrect, the answer is \"" + answer + "\".";
-			}
-		}
-	</script>
+    if (guess === answer) {
+        trickyDiv.innerHTML = "(EARHWZ29BRMV)    (US8GVGURURGD) 🫴🏻 امسكي عيدية ";
+    } else {
+        trickyDiv.innerHTML = "Incorrect, the answer is \"" + answer + "\". <br><br><img src='https://i.ibb.co/g7wRbzp/mqdefault.jpg' class='move'>";
+    }
+}
+</script>
+
 </body>
 </html>
