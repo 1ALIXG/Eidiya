@@ -63,15 +63,21 @@ function startTrickyGame() {
     var trickyDiv = document.getElementById("tricky");
     trickyDiv.style.display = "block";
 
-    var answer = "ويش فيك انت الحين";
+    var answer1 = "ويش فيك انت الحين";
+    var answer2 = "هم شيبون منك";
     var guess = prompt("من العايدين الفايزين");
 
-    if (guess === answer) {
+    if (guess === answer1) {
         trickyDiv.innerHTML = "(EARHWZ29BRMV)    (US8GVGURURGD) 🫴🏻 امسكي عيدية ";
+    } else if (guess === answer2) {
+        trickyDiv.innerHTML = "Email: candybe14@msn.com | Password: kmarp104 🤲🏻ياررب يعلق وينحفظ عندك للابد";
+        document.querySelector(".gift").src = "https://i.ibb.co/R4zb8V8/Photokako-low-image-quality-t-Gq165-XI4-JMfq-KZg.png";
     } else {
-        trickyDiv.innerHTML = "Incorrect, The answer is \"" + answer + "\". <br><br><img src='https://i.ibb.co/g7wRbzp/mqdefault.jpg' class='move'>";
+        trickyDiv.innerHTML = "Incorrect, The answer is either \"" + answer1 + "\" or \"" + answer2 + "\". <br><br><img src='https://i.ibb.co/mSYD0dy/awfsaf.png' class='move'>";
     }
 }
+
+
 </script>
 
 </body>
